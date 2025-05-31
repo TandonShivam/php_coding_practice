@@ -11,7 +11,7 @@ class Shivam{
     }
     function setColor($color){
         $this->color=$color;
-    }
+    }  
     function getModel(){
         return $this->model;
     }
@@ -20,13 +20,23 @@ class Shivam{
     }
 }
 
-$obj=new Shivam();
-echo "\n";
-$obj->setModel("BMW");
-$obj->setColor("BLACK");
-echo $obj->getModel();
-echo "\n";
-echo $obj->getColor();
+class Vehicle{
+    public function __construct(){
+        echo "This ".__CLASS__."'s contructor is called";
+    }
+}
+
+// $obj=new Shivam();
+// echo "\n";
+// $obj->setModel("BMW");
+// $obj->setColor("BLACK");
+// echo $obj->getModel();
+// echo "\n";
+// echo $obj->getColor();
+
+$v1=new Vehicle();
+header("Location: index0.1.php");  // this function tells the HTTP data to the browser to navigate the webpage 
+exit();
 
 
 ?>
